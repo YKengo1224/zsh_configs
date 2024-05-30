@@ -136,7 +136,7 @@ abbr -S j="z" >>/dev/null
 abbr -S e='emacsclient' >>/dev/null 
 abbr -S en='emacsclient -nw' >>/dev/null
 abbr -S ed='emacs --daemon' >>/dev/null
-abbr -S ek='emacsclient -e "(kill-emacs)"' >>dev/null
+abbr -S ek='emacsclient -e "(kill-emacs)"' >>/dev/null
 abbr -S eb='emacs --batch -f batch-byte-compile ~/.emacs.d/init.el' >>/dev/null
 #vivado
 abbr -S viv='vivado' >>/dev/null
