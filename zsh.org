@@ -1,0 +1,66 @@
+#+TITLE:  Zsh 設定備忘録
+* zsh インストール
+ "sudo apt install zsh" でインストール
+
+* shell切り替え
+ "sudo chsh -s $(which zsh) kengo"で切り替えてrestart
+ terminal機動直後の選択は(2)
+
+* Oh My Zsh Themeをインストール
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+* powerlevel10kをインストール
+** [https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k]
+からttfファイルをダウンロードして~/.fontsに入れ，ターミナルの設定フォントをMesloLGS NFに設定する
+** クローン
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/zsh_configs/.oh-my-zsh/custom/themes/powerlevel10k
+** .zshrcに以下を記述(Oh My Zsh Themeをインストールしている前提)
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+* zsh-syntax-highlighting  ハイライト表示
+以下のコードを実行
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/zsh_configs/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+.zshrcのpluginsを以下のように変更
+# 変更後
+plugins=( 
+    git
+    zsh-syntax-highlighting
+)
+
+* zsh-autosuggestions   補完機能
+以下のコードを実行
+git clone https://github.com/zsh-users/zsh-autosuggestions $HOME/zsh_configs/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+
+.zshrcのpluginsを以下のように変更
+# 変更後
+plugins=( 
+    git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
+
+* zsh-abbr  aliasの進化版
+以下のコードを実行
+git clone https://github.com/olets/zsh-abbr --single-branch --branch main --depth 1 $HOME/zsh_configs/.oh-my-zsh/custom/plugins/zsh-abbr
+
+* rupa/z    cdの進化版
+以下のコードを実行
+git clone git@github.com:rupa/z.git $HOME/zsh_configs/.oh-my-zsh/custom/plugins/z
+.zshrcのpluginsを以下のように変更
+# 変更後
+plugins=( 
+    git
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+    z
+)
+
+
+* .zshrcに以下を記述
+source /home/kengo/zsh_configs/.zshrc 
+
+* 参考サイト
+[https://qiita.com/Kobayashi2019/items/447a974e6b4493a758ae]
+[https://qiita.com/alpaca-honke/items/2041012ff5a0291bf084]
+[https://namileriblog.com/terminal/terminal_setting_powerlevel10k/#i-2]
+
