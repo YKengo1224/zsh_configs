@@ -6,7 +6,6 @@ cp ~/.zshrc  ~/.zshrc_old
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm ~/.zshrc
 cp ./zshrc_home ~/.zshrc
-mv ~/.oh-my-zsh ./
 #powerlevel10k
 cp -r ./.fonts/ ~/
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/zsh_configs/.oh-my-zsh/custom/themes/powerlevel10k
