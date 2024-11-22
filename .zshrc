@@ -141,6 +141,7 @@ abbr -S eb='emacs --batch -f batch-byte-compile ~/.emacs.d/init.el' >>/dev/null
 #vivado
 abbr -S viv='vivado' >>/dev/null
 abbr -S vivt='vivado vivado_proj/*.xpr&' >>/dev/null
+abbr -S vivproj='$HOME/zsh_configs/viv_proj.sh' >>/dev/null 
 #git
 abbr -S ga='git add' >>/dev/null
 abbr -S gst='git status' >>/dev/null
