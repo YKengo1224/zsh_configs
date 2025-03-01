@@ -139,7 +139,11 @@ vterm_printf() {
     fi
 }
 
-## path setting
+
+#veryl completion
+fpath=($HOME/zsh_configs "${fpath[@]}")
+autoload -Uz compinit && compinit
+
 
 #---------my abbr-----------------------------
 #abbr -S ='' >>/dev/null
